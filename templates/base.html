@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Twitter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+  <script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'popper.min.js' %}"></script>
+  <script src="{% static 'bootstrap.js' %}"></script>
+  <script src="{% static 'scripts.js' %} "></script>
+  <link rel="stylesheet" href="{% static 'font-awesome.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap-switch.css' %}">
+  <link href="{% static 'css.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+</head>
+
+<body id="personal" class="container" style="direction:rtl; text-align:right; font-family:Yekan; background-image:url('{%static 'background.png' %}')">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">توییتر فارسی</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- <ul class="navbar-nav mr">
+        <li class="nav-item active" style="border:1px ; border-radius : 5px; background-color : #e76767">
+          <a class="nav-link" href="#">ثبت نام<span class="sr-only">(current)</span></a>
+        </li>
+      </ul> -->
+        {%block navbar %}
+        {%endblock%}
+    </div>
+  </nav>
+{% block content %}
+{%endblock%}
+
+<footer class="blog-footer d-flex justify-content-center">
+  <a href="https://t.me/EvoTeam"> <img src="{%static 'evoTeam.png' %}" class="mr-2 ml-2" style="height : 24px; width : auto" > </a>
+  <p style="direction : ltr; text-align : center">Made By</p>
+  <div class="d-flex justify-content-center">
+</div>
+</footer>
+  </body>
+
+  </html>
